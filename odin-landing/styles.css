@@ -23,15 +23,15 @@ nav>ul>li {
 }
 section:first-of-type {
     display: flex;
-    justify-content: center;
     background-color: #1F2937;
     padding-top: 5%;
     padding-bottom: 5%;
-    gap: 300px;
+    gap: 50px;
 }
 section:first-of-type>div:first-of-type {
     height: 250px;
     width: 450px;
+    margin-left: 8%;
 }
 section:first-of-type>div>h2 {
     font-size: 48px;
@@ -46,14 +46,88 @@ section:first-of-type>div>button {
     background-color: #3882F6;
     color: #F9FAF8;
     border-radius: 10px;
+    border: none;
+    height: 30px;
+    width: 90px;
+    margin-top: 10px;
+    padding: 0px 0px;
 }
 .placeholder {
     display: flex;
     align-items: center;
     background-color: rgb(118, 118, 118);
     height: 250px;
-    width: 450px;
+    width: 610px;
 }
 .placeholder>p {
     margin: 0 auto;
+}
+section:nth-of-type(2)>h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1F2937;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.images>div>div {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 89, 255);
+}
+.images>div>p {
+    margin-top: 10px;
+    width: 150px;
+    text-align: center;
+    color: rgb(118, 118, 118);
+}
+section:nth-of-type(3) {
+    margin-top: 50px;
+    background-color: #E5E7EB;
+}
+section:nth-of-type(3)>p:first-of-type {
+    font-size: 36px;
+    font-weight: 100;
+    font-style: italic;
+    color: #1F2937;
+    padding-top: 100px;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+section:nth-of-type(3)>p:nth-of-type(2) {
+    padding-right: 250px;
+    text-align: right;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 100px;
+}
+section:nth-of-type(4) {
+    display: flex;
+    background-color: #3882F6;
+    color: #E5E7EB;
+    margin: 75px 125px;
+    padding: 70px 100px;
+    border-radius: 10px;
+    gap: 300px;
+}
+section:nth-of-type(4)>button {
+    border: 2px solid #E5E7EB;
+    background-color: #3882F6;
+    color: #E5E7EB;
+    border-radius: 10px;
+    width: 105px;
+    height: 30px;
+}
+footer {
+    background-color: #1F2937;
+    color: #E5E7EB;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
