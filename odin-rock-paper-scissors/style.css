@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    color: green;
+}
+button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: rgb(51, 255, 0);
+    color: aliceblue;
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    justify-self: center;
+    transition: 0.3s ease-in-out;
+}
+button:hover {
+    background-color: green;
+}
+div {
+    width: 350px;
+    height: 250px;
+    margin: 15px auto;
+    border: 2px solid green;
+    border-radius: 10px;
+}
+div>p {
+    padding-left: 10px;
+    font-style: italic;
+}

@@ -1,3 +1,20 @@
+let userScore = 0;
+let computerScore = 0;
+let roundCounter = 0;
+let buttons = document.getElementsByTagName('button');
+let div = document.getElementsByTagName('div')[0];
+for (let button of buttons) {
+    button.addEventListener('click', (event) => {
+        roundCounter++;
+        game(event);
+        if (roundCounter === 5) {
+            telltheWinner(userScore, computerScore);
+            userScore = 0;
+            computerScore = 0;
+            setTimeout(() => div.replaceChildren(), 3000); 
+        }
+    });
+}
 function getComputerChoice() {
     let num = Math.floor(Math.random() * 3);
     switch (num) {
@@ -29,21 +46,27 @@ function play(playerSelection, computerSelection) {
                 };
     }
 }
-function game() {
-    let userScore = 0
-    let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        let userSelection = prompt('Your move: rock, paper, or scissors ?');
+function game(event) {
+        let userSelection = event.target.innerText;
         let computerSelection = getComputerChoice();
-        console.log(play(userSelection, computerSelection));
-        if (play(userSelection, computerSelection).includes('win')) {
+        let text = play(userSelection, computerSelection);
+        let paragraph = document.createElement('p');
+        paragraph.innerText = text;
+        div.appendChild(paragraph);
+        if (text.includes('win')) {
             userScore++;
-        } else if (play(userSelection, computerSelection).includes('lose')) computerScore++;
-    }
-    if (userScore > computerScore) {
-        console.log('You\'re the absolute winner!');
-    } else if (userScore < computerScore) {
-        console.log('Ha-ha-ha you lost to computer!');
-    } else console.log('Draw!');
+        } else if (text.includes('lose')) computerScore++;
 }
-game();
+function telltheWinner (userScore, computerScore) {
+    let text = '';
+    if (userScore > computerScore) {
+        text = 'You\'re the absolute winner!';
+    } else if (userScore < computerScore) {
+        text =  'Ha-ha-ha you lost to computer!';
+    } else {
+        text = 'It\'s a draw!';
+    }
+    let paragraph = document.createElement('p');
+    paragraph.innerText = text;
+    div.appendChild(paragraph);
+}
