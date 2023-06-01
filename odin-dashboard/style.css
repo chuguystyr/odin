@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "aside header"
+    "aside main";
+}
+header {
+    background-color: green;
+    grid-area: header;
+}
+main {
+    background-color: yellow;
+    grid-area: main;
+
+}
+aside {
+    height: 100vh;
+    background-color: #1992d4;
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+aside>svg#logo {
+    width: 60px;
+    height: 60px;
+    fill: white;
+    padding: 15px;
+}
+
+aside>svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    padding: 15px;
+}
+aside>svg#logo+p {
+    display: inline;
+    color: white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+aside>p {
+    display: inline;
+    color: white;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
