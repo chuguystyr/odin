@@ -2,26 +2,36 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 200px auto;
     grid-template-areas:
     "aside header"
     "aside main";
 }
 header {
-    background-color: green;
+    background-color: #fff;
     grid-area: header;
+    box-shadow: 0px 20px 13px 1px rgba(0,0,0,0.75);
 }
 main {
-    background-color: yellow;
+    background-color: #e2e8f0;
     grid-area: main;
-
+    padding-top: 13px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 375px 375px auto;
+    grid-template-rows: 50px 150px 150px 150px;
+    grid-template-areas:
+    "title1 . title2"
+    "pCard1 pCard2 announcements"
+    "pCard3 pCard4 annoucements"
+    "pCard5 pCard6 trending";
 }
 aside {
     height: 100vh;
     background-color: #1992d4;
     grid-area: aside;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:  60px 100px;
 }
 aside>svg#logo {
     width: 60px;
@@ -29,7 +39,6 @@ aside>svg#logo {
     fill: white;
     padding: 15px;
 }
-
 aside>svg {
     width: 30px;
     height: 30px;
@@ -41,10 +50,136 @@ aside>svg#logo+p {
     color: white;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
+    margin-left: 20px;
 }
 aside>p {
     display: inline;
     color: white;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
+    align-self: center;
+}
+.upper {
+    display: flex;
+    padding: 30px;
+    padding-bottom: 0;
+    gap: 30px;
+}
+.upper>svg {
+    width: 35px;
+    height: 35px;
+}
+.upper>input {
+    background-color: #e2e8f0;
+    width: 500px;
+    height: 35px;
+    border: none;
+    border-radius: 15px;
+    padding-left: 15px;
+    font-size: larger;
+    margin-right: 100px;
+}
+.upper>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.upper>p {
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
+.lower {
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+#biggerAvatar {
+    margin-left: 50px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+}
+.lower>p {
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+}
+#smaller {
+    font-weight: 600;
+    opacity: 0.7;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+#bigger {
+    font-weight: 700;
+    font-size: larger;
+    margin-right: 190px;
+}
+.lower>button {
+    width: 95px;
+    height: 40px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #1992d4;
+    border-radius: 25px;
+    border: none;
+    margin-left: 25px;
+}
+#projects {
+    grid-area: title1;
+}
+#announcements {
+    grid-area: title2;
+}
+#projects, #announcements, #trendTitle {
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+}
+.pCard {
+    width: 320px;
+    height: 125px;
+    background-color: #fff;
+    border-left: 5px solid #f0b429;
+    border-radius: 7px;
+    box-shadow: 7px 7px 5px -4px rgba(0,0,0,0.75);
+}
+#cardOne {
+    grid-area: pCard1;
+}
+#cardTwo {
+    grid-area: pCard2;
+}
+#cardThree {
+    grid-area: pCard3;
+}
+#cardFour {
+    grid-area: pCard4;
+}
+#cardFive {
+    grid-area: pCard5;
+}
+#cardSix {
+    grid-area: pCard6;
+}
+#announcement {
+    grid-area: announcements;
+    background-color: #fff;
+    height: 200px;
+    width: 400px;
+    border-radius: 7px;
+    box-shadow: 7px 7px 5px -4px rgba(0,0,0,0.75);
+}
+#trending {
+    grid-area: trending;
+    margin-top: -100px;
+}
+#trends {
+    background-color: #fff;
+    height: 160px;
+    width: 400px;
+    border-radius: 7px;
+    box-shadow: 7px 7px 5px -4px rgba(0,0,0,0.75);
 }
