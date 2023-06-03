@@ -145,6 +145,12 @@ aside>p {
     border-left: 5px solid #f0b429;
     border-radius: 7px;
     box-shadow: 7px 7px 5px -4px rgba(0,0,0,0.75);
+    font-family: 'Roboto', sans-serif;
+    padding-left: 20px;
+}
+.pCard>p {
+    font-size: 14px;
+    margin-bottom: 0;
 }
 #cardOne {
     grid-area: pCard1;
@@ -182,4 +188,46 @@ aside>p {
     width: 400px;
     border-radius: 7px;
     box-shadow: 7px 7px 5px -4px rgba(0,0,0,0.75);
+}
+.title {
+    font-weight: 600;
+    font-size: 18px;
+}
+.icons>svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+.icons {
+    display: flex;
+    justify-content: flex-end;
+}
+#announcement {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#announcement>.title {
+    font-size: 13px;
+}
+#trends {
+    display: grid;
+    width: 410px;
+    height: 145px;
+    padding-left: 30px;
+    padding-top: 20px;
+    grid-template-columns: 50px 300px;
+    grid-template-rows: 50px 50px;
+    row-gap: 20px;
+}
+#trends>img {
+    border-radius: 55%;
+    width: 50px;
+    height: 50px;
+}
+.avatarData>p {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
