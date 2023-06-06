@@ -3,19 +3,21 @@ const newBook = document.getElementById('newBook');
 const form = document.getElementsByTagName('form')[0];
 const formClose = document.getElementById('close');
 let myLibrary = [];
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    Object.defineProperty(this, 'info', {
-        value: function() {
-            let info = `${this.title} written by ${this.author}, ${this.pages} pages`;
-            this.read ? info += ' has already been read.' : info += ' hasn\'t been read yet.';
-            return info;
-        },
-        enumerable: false
-    });
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        Object.defineProperty(this, 'info', {
+            value: function () {
+                let info = `${this.title} written by ${this.author}, ${this.pages} pages`;
+                this.read ? info += ' has already been read.' : info += ' hasn\'t been read yet.';
+                return info;
+            },
+            enumerable: false
+        });
+    }
 }
 
 const historyBook = new Book('Подолати минуле: глобальна історія України', 'Ярослав Грицак', '400', false);
