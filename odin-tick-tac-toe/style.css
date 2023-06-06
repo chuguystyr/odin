@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+}
+#gameboard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 480px;
+    gap: 10px;
+    margin: 0 auto;
+}
+.cell {
+    width: 150px;
+    height: 150px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    transition: all 0.5s ease-in-out;
+}
+.cell:hover {
+    background-color: rgb(159, 159, 159);
+}
+#winner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#winner>p {
+    font-size: larger;
+}
+#reset {
+    position: absolute;
+    left: 44%;
+    width: 175px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: larger;
+    background-color: whitesmoke;
+    color: black;
+    transition: all 0.5s ease-in-out;
+}
+#reset:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
